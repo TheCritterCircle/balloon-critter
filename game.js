@@ -97,8 +97,8 @@ const critter = {
   width : 50,
   height : 66,
   frame : 0,
-  gravity : 0.25,
-  jump : 4.6,
+  gravity : 0.15,
+  jump : 3.6,
   speed : 0,
   radius : 12,
   // Draw the critter into canvas
@@ -261,20 +261,16 @@ const score = {
     // Draw Score into canvas
     draw : function(){
         context.fillStyle = "#FFF";
-        context.strokeStyle = "#000";
         if(status.current == status.game){
             context.lineWidth = 2;
             context.font = "35px Teko";
             context.fillText(this.value, canvas.width/2, 50);
-            context.strokeText(this.value, canvas.width/2, 50);
         }else if(status.current == status.over){
             // Draw the Score Value
             context.font = "25px Teko";
             context.fillText(this.value, 225, 186);
-            context.strokeText(this.value, 225, 186);
             // Draw the Best Score Value
             context.fillText(this.best, 225, 228);
-            context.strokeText(this.best, 225, 228);
         }
     },
 
