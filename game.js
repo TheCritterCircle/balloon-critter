@@ -134,6 +134,9 @@ const critter = {
           status.current = status.over;
         }
       }
+      if(this.positionY - this.height/2 < 0){
+        this.positionY = this.height/2;
+      }
     }
   }
 }
